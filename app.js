@@ -67,10 +67,11 @@ save_settings = function () {
     lists[l].bibs = ',' + this.value + ',';
 }
 // lists of bib numbers
-var list_array = ['gc','pc','my','bp'];
+var list_array = ['gc','pc','pd','my','bp'];
 var lists = [];
 lists['gc'] = {"id" : "gc", "label" : "General classification", "classname" : "gc", "sound" : "", "bibs" : ""};
 lists['pc'] = {"id" : "pc", "label" : "Sprinters", "classname" : "green", "sound" : "", "bibs" : ""};
+lists['pd'] = {"id" : "pd", "label" : "KOM", "classname" : "red", "sound" : "", "bibs" : ""};
 lists['my'] = {"id" : "my", "label" : "My favourites", "classname" : "mylist", "sound" : "", "bibs" : ""};
 lists['bp'] = {"id" : "bp", "label" : "Play a sound when slower than " + max_slow_speed + "kmh", "classname" : "", "sound" : "sound1", "bibs" : ""};
 for (var i=0; i < list_array.length; i++) {
@@ -168,7 +169,10 @@ function start_listening() {
                         if (lists['pc'].bibs.includes(',' + rider.Bib + ',')) {
                             extra_class += ' green'
                         }
-            			if (lists['my'].bibs.includes(',' + rider.Bib + ',')) {
+                        if (lists['pd'].bibs.includes(',' + rider.Bib + ',')) {
+                            extra_class += ' red'
+                        }
+            		if (lists['my'].bibs.includes(',' + rider.Bib + ',')) {
                             extra_class += ' mylist'
                         }
                     } else {
