@@ -69,7 +69,7 @@ save_settings = function () {
 // lists of bib numbers
 var list_array = ['gc','pc','pd','my','bp'];
 var lists = [];
-lists['gc'] = {"id" : "gc", "label" : "General classification", "classname" : "gc", "sound" : "", "bibs" : ""};
+lists['gc'] = {"id" : "gc", "label" : "General classification", "classname" : "gc", "sound" : "", "bibs" : "1,2,3,4,5,6"};
 lists['pc'] = {"id" : "pc", "label" : "Sprinters", "classname" : "green", "sound" : "", "bibs" : ""};
 lists['pd'] = {"id" : "pd", "label" : "KOM", "classname" : "green", "sound" : "", "bibs" : ""};
 lists['my'] = {"id" : "my", "label" : "My favourites", "classname" : "mylist", "sound" : "", "bibs" : ""};
